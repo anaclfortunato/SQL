@@ -28,7 +28,6 @@ CREATE OR REPLACE VIEW vacinacao AS (
     
 SELECT * FROM vacinacao;
 ----------------------------------------------------------------------------------------------------------------------------
-
 -- Soma do faturamento diário da clínica 
 
 CREATE OR REPLACE VIEW faturamento AS (
@@ -38,7 +37,6 @@ CREATE OR REPLACE VIEW faturamento AS (
 
 SELECT * FROM faturamento;
 ----------------------------------------------------------------------------------------------------------------------------
-
 -- Histórico de todos os atendimentos clínicos no mês 10/2022 
 -- Exemplo de uso de uma funcionalidade que se torna mais útil quando há dados de mais meses no banco de dados 
 
