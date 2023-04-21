@@ -56,3 +56,6 @@ presente. Script pode ser acessado em [db_clinica_vet](https://github.com/anaclf
 
 Ao ser concluída a inserção do banco de dados relacional no servidor MySQL, podemos gerar um **diagrama entidade-relacionamento**, onde aparece de 
 forma ilustrada através de um fluxograma as relações entre as tabelas e suas colunas. Além da tabela valores que não possui relação com outras tabelas. 
+
+![diagrama_ER](https://user-images.githubusercontent.com/131414411/233523953-42aa6bce-ece1-495a-9db8-377b6753022a.png)
+
