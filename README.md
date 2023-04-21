@@ -40,4 +40,9 @@ Listagem de tabelas relacionais que compõem o projeto:
   
     • Vacina: tipo específico de consulta que há necessidade de informações diferentes sobre protocolo vacinal iniciado.
   
-Também foi incluso uma tabela contendo serviços e valores oferecidos pela clínica.
+    Também foi incluso uma tabela contendo serviços e valores oferecidos pela clínica.
+    
+ Escopo de tabelas com descrição de sua estrutura (coluna, tipo de dado e tipo de chave):
+ 
+ ![image](https://user-images.githubusercontent.com/131414411/233515709-b4f970a7-25ee-443d-8e0a-ac911b3e4a8b.png)
+
