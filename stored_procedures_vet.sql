@@ -26,7 +26,7 @@ CALL consultas_vet (7);
 CREATE DEFINER=`root`@`localhost` PROCEDURE `cliente_paciente`(IN cliente VARCHAR (100), paciente VARCHAR (30))
 BEGIN
 	SELECT nome_cliente, id_paciente, nome_paciente, especie, raca, sexo, pelagem FROM paciente p 
-    INNER JOIN cliente c ON (p.id_cliente = c.id_cliente)
+   	INNER JOIN cliente c ON (p.id_cliente = c.id_cliente)
 	WHERE nome_cliente = cliente AND nome_paciente = paciente;
 END
 ------------------------
