@@ -13,9 +13,9 @@ USE db_clinica_vet;
 CREATE TABLE novo_pagamento (
 	id_novo INT NOT NULL AUTO_INCREMENT, 
 	valor_pagamento DECIMAL (5,2) NOT NULL,
-    data_pagamento DATE NOT NULL,
-    hora_pagamento TIME NOT NULL,
-    usuario_pagamento VARCHAR (50) NOT NULL,    
+    	data_pagamento DATE NOT NULL,
+    	hora_pagamento TIME NOT NULL,
+    	usuario_pagamento VARCHAR (50) NOT NULL,    
 	PRIMARY KEY (id_novo)
 );
 
@@ -44,12 +44,12 @@ SELECT * FROM novo_pagamento;
 CREATE TABLE peso_anterior (
 	id_alteracao INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	id_paciente INT NOT NULL,
-    nome_paciente VARCHAR (50) NOT NULL, 
-    id_cliente INT NOT NULL,
-    peso DECIMAL (5,2) NOT NULL,
-    data_alteracao DATE NOT NULL,
-    hora_alteracao TIME NOT NULL, 
-    usuario_alteracao VARCHAR(50) NOT NULL
+    	nome_paciente VARCHAR (50) NOT NULL, 
+    	id_cliente INT NOT NULL,
+    	peso DECIMAL (5,2) NOT NULL,
+    	data_alteracao DATE NOT NULL,
+    	hora_alteracao TIME NOT NULL, 
+    	usuario_alteracao VARCHAR(50) NOT NULL
 ); 
 
 -- Criação do trigger que irá armazenar na tabela peso_anterior o peso após modificação 
