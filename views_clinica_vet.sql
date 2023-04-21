@@ -15,7 +15,7 @@ CREATE OR REPLACE VIEW retorno AS (
 
 SELECT * FROM retorno;
 ----------------------------------------------------------------------------------------------------------------------------
--- Historico da quantidade de vacinas aplicadas em canino (cachorro) e felino (gato)
+-- Histórico da quantidade de vacinas aplicadas em canino (cachorro) e felino (gato)
 
 CREATE OR REPLACE VIEW vacinacao AS (
 	SELECT especie, tipo_vacina, COUNT(tipo_vacina) AS qtd_vacinas 
