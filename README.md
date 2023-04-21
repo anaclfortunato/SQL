@@ -131,12 +131,12 @@ alterarmos o código da stored procedure, sem haver a necessidade de alterar o c
 
 Durante o projeto foram criados dois stored procedures que podem ser acessados em [stored_procedures_vet](https://github.com/anaclfortunato/SQL/blob/main/stored_procedures_vet.sql). 
 
-        •   consulta_marcada: ao ser chamado de acordo com o id do médico veterinário retorna todos consultas que ele realizou, porém se adicionar algum 
-        id_mv não correspondente ao armazenado nas tabelas veterinário/consulta, aparecerá mensagem de erro.
-        
-        •   cliente_paciente: ao ser chamado retorna a partir do nome do cliente e do paciente as principais informações sobre o paciente. Se adicionar 
-        qualquer um dos argumentos de forma diferente aos que estão relacionados no banco de dados, irá retornar a estrutura da tabela, porém nenhum 
-        registro. 
+•   `consulta_marcada`: ao ser chamado de acordo com o id do médico veterinário retorna todos consultas que ele realizou, porém se adicionar algum 
+     id_mv não correspondente ao armazenado nas tabelas veterinário/consulta, aparecerá mensagem de erro.
+       
+•   `cliente_paciente`: ao ser chamado retorna a partir do nome do cliente e do paciente as principais informações sobre o paciente. Se adicionar 
+     qualquer um dos argumentos de forma diferente aos que estão relacionados no banco de dados, irá retornar a estrutura da tabela, porém nenhum 
+     registro. 
 
 ### Triggers 
 
@@ -157,4 +157,6 @@ para sempre mapear todas as alterações realizadas nas tabelas do DB.
 
 Neste projeto foram criados dois triggers, sendo eles um de BEFORE e um de AFTER, podem ser acessado o script em [triggers_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/triggers_clinica_vet.sql).
 
-`•  Trigger BEFORE`:    
+•  `Trigger BEFORE`: armazena valor de pagamento novo antes de inseri-lo na tabela pagamento junto a data, hora e usuário que inseriu esse novo registro. Antes
+    de criá-lo primeiro é necessário fazer a criação da tabela novo_pagamento que irá armazenar o registro de novo pagamento quando for feito. Então deve ser 
+    feito a criação do trigger tr_add_pagamento que será responsável por mandar os dados inseridos em pagamento direto para tabela novo_pagamento.
