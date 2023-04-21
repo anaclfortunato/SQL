@@ -98,11 +98,11 @@ da view quando ela é criada.
 
 Nesse projeto foram criadas três views descritas a seguir, o script de criação e exemplo de como fazer consulta com elas está disponível em [views_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/views_clinica_vet.sql):
 
-        •   retorno: retorna o histórico de consultas marcadas como retorno feitas na clínica;
+•   `retorno`: retorna o histórico de consultas marcadas como retorno feitas na clínica;
         
-        •	vacinacao: retorna histórico da quantidade de vacinas aplicadas em canino (cachorro) e felino (gato);
+•	`vacinacao`: retorna histórico da quantidade de vacinas aplicadas em canino (cachorro) e felino (gato);
         
-        •	faturamento: retorna histórico de todos os atendimentos clínicos no mês 10/2022.
+•	`faturamento`: retorna histórico de todos os atendimentos clínicos no mês 10/2022.
  
 No caso do banco de dados atual, a view faturamento não teria tanta funcionalidade, já que tem apenas dados de uma semana de atendimento, porém em um 
 caso real ajudaria a ter controle de quantas consultas clínicas são feitas por dia, sendo esse o controle dos atendimentos um dos focos principais de 
