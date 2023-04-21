@@ -158,5 +158,57 @@ para sempre mapear todas as alterações realizadas nas tabelas do DB.
 Neste projeto foram criados dois triggers, sendo eles um de BEFORE e um de AFTER, podem ser acessado o script em [triggers_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/triggers_clinica_vet.sql).
 
 •  `Trigger BEFORE`: armazena valor de pagamento novo antes de inseri-lo na tabela pagamento junto a data, hora e usuário que inseriu esse novo registro. Antes
-    de criá-lo primeiro é necessário fazer a criação da tabela novo_pagamento que irá armazenar o registro de novo pagamento quando for feito. Então deve ser 
-    feito a criação do trigger tr_add_pagamento que será responsável por mandar os dados inseridos em pagamento direto para tabela novo_pagamento.
+    de criá-lo primeiro é necessário fazer a criação da tabela `novo_pagamento` que irá armazenar o registro de novo pagamento quando for feito. Então deve ser 
+    feito a criação do trigger `tr_add_pagamento` que será responsável por mandar os dados inseridos em pagamento direto para tabela novo_pagamento.
+    
+•  `Trigger AFTER`: armazena peso anterior do animal depois que o altera na tabela paciente, também inclui id e nome do paciente, id do cliente, data, hora e 
+    usuário que fez última atualização. Primeiro faz a criação da tabela `peso_anterior` que irá armazenar as alterações de peso dos pacientes. Uso de um 
+    id_alteracao, pois assim fica possível alterar mais de uma vez o peso do mesmo animal não usando id_paciente como primary key. E então é feita a criação 
+    do trigger `tr_alter_peso` que irá armazenar o peso que estava registrado na tabela paciente antes de ser feita a alteração desse dado, assim tendo melhor 
+    controle da variação de peso dos pacientes. 
+
+## Gerenciamento de usuários 
+
+A linguagem de controle de dados (DCL) permite definir diferentes usuários dentro da engine do banco de dados MySQL e estabelecer permissões e privilégios
+totais ou parciais para cada um deles ou negar o acesso a diferentes objetos que formam o bando de dados.
+
+Ela fornece uma série de cláusulas e comandos para criar, renomear e eliminar usuários dentro de um ou mais servidores do banco de dados, assim como estabelecer 
+e/ou modificar uma password ou senha de acesso. Uma vez definidor os usuários da DCL, contamos com outro set de comandos e cláusulas para permitir ou revogar o 
+acesso a diferentes objetos do banco de dados. Por objetos, nos referimos a: tabelas, campos, views, stored procedures e funções armazenadas. 
+
+Para uma das tarefas entregue durante o curso foi criado um usuário e concedido permissões específicas para ele ter acesso sobre os objetos do banco de dados
+db_clinica_vet. Script de exemplo do uso da DCL pode ser acessado em [create_user](https://github.com/anaclfortunato/SQL/blob/main/create_user.sql).
+
+## Controle de transações 
+
+A Transaction Control Language (ou TCL) é a sublinguagem SQL que se refere ao grupo de sentenças de controle de transações utilizadas para administrar
+transações no banco de dados. São utilizadas para gerenciar as modificações realizadas pelas sentenças DML (manipulação de dados através de INSERT, UPDATE e 
+DELETE) e agrupá-las em transações lógicas. 
+
+O papel da TCL é fundamental, já que, através dela, controlamos as cláusulas ou operações de DML, agrupando-as de forma a estabelecer uma lógica transacional 
+quando realizamos múltiplas operações que afetam uma ou mais tabelas. Basicamente, nos ajuda a manter a integridade dos dados manipulados.
+
+A TCL inclui três sentenças chave que se integram às cláusulas SQL para controlar cada uma das operações do DML durante seu processo de execução. Esses
+comandos são: 
+
+•   `COMMIT`: serve para “confirmar” as operações realizadas sobre uma ou mais tabelas. Quando executado, se encarrega de confirmar ou armazenar as 
+    modificações realizadas nas tabelas, tornando as modificações permanentes e pondo-as à disposição de outros usuários. 
+    
+•  `ROLBACK`: esse comando retorna ao estado permanente anterior ao atual ou “desfaz” as modificações realizadas sobre as tabelas em questão. Basicamente, 
+    funciona como o comando UNDO (desfazer) ou CTRL + Z que utilizamos frequentemente em qualquer programa de computador. Antes de utilizar esse comando, 
+    devemos considerar que ele só funcionará se o comando COMMIT ainda não tiver sido executado.
+    
+•  `SAVEPOINT`: esse comando nos permite estabelecer um ponto de restauração dentro da transação utilizando um identificador. Podemos fazer um ROLLBACK 
+    desfazendo apenas as instruções que foram executadas até um determinado SAVEPOINT. É um procedimento ideal para modificações de registros em massa, 
+    estabelecendo uma marcação específica em determinados intervalos de blocos de registros modificados. Se tivermos que executar ROLLBACK em algum ponto 
+    da modificação, podemos fazer isso definindo algum dos SAVEPOINT para não perdermos todo o bloco de registros modificados. Além disso, é preciso 
+    considerar que, ao executar o COMMIT, todo SAVEPOINT que tivermos estabelecido será perdido, visto que, nesse ponto, o ROLLBACK não pode ser executado. 
+
+A entrega feita ao decorrer do curso sobre esse tema consiste na realização de duas diferentes transações (uma na tabela veterinario e outra na cliente) 
+para ser explorado o uso dessas funções, o script contendo esta tarefa pode ser acesso em [transaction_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/transaction_clinica_vet.sql).
+    
+# Entrega do projeto final 
+
+O projeto entregue no curso de SQL, após a conclusão das 50 horas de aulas ao vivo, teve todas as suas etapas entregues e avaliadas com nota máxima, da mesma 
+forma o projeto total ao final do curso. Todos conceitos essenciais para manipulação e análises de dados em SQL que buscam soluções para o problema de negócio 
+foram exploradas de acordo com o aprendizado do curso. 
