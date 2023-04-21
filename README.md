@@ -53,4 +53,6 @@ essenciais que permitem o embasamento necessário para algumas análises.
 
 Após definir a estrutura das tabelas, foi criado um script contendo o schema onde será inserido o banco de dados e estutura das tabelas nele 
 presente. Script pode ser acessado em [db_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/db_clinica_vet.sql).
-        
+
+Ao ser concluída a inserção do banco de dados relacional no servidor MySQL podemos gerar um diagrama entidade-relacionamento, onde aparece de 
+forma ilustrada através de um fluxograma as relações entre as tabelas e suas colunas. Além da tabela valores que não possui relação com outras tabelas. 
