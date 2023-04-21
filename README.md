@@ -52,7 +52,5 @@ essenciais que permitem o embasamento necessário para algumas análises.
 ## Script de criação de objetos do banco de dados
 
 Após definir a estrutura das tabelas, foi criado um script contendo o schema onde será inserido o banco de dados e estutura das tabelas nele 
-presente. 
-
-        Script pode ser acessado em [db_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/db_clinica_vet.sql)
+presente. Script pode ser acessado em [db_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/db_clinica_vet.sql).
         
