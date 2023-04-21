@@ -44,6 +44,7 @@ Listagem de tabelas relacionais que compõem o projeto:
     
  Escopo de tabelas com descrição de sua estrutura (coluna, tipo de dado e tipo de chave):
  
- ![red](https://user-images.githubusercontent.com/131414411/233515994-84b8d8b4-a39f-43a8-8191-dba39a789b12.png)
+![tabelas](https://user-images.githubusercontent.com/131414411/233516113-8dcafbad-9bf1-4da0-b7a6-a9f2a3072ad5.png)
+
 
 
