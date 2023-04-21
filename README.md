@@ -40,7 +40,7 @@ Listagem de tabelas relacionais que compõem o projeto:
         
         •	Vacina: tipo específico de consulta que há necessidade de informações diferentes sobre protocolo vacinal iniciado. 
 
-    Também foi incluso uma tabela contendo serviços e valores oferecidos pela clínica.
+    Também foi incluso uma tabela Valores contendo serviços oferecidos pela clínica e seu determinado valor. 
     
  Escopo de tabelas com descrição de sua estrutura (coluna, tipo de dado e tipo de chave):
  
@@ -74,7 +74,6 @@ O arquivo contendo o script os dados a serem inseridos nas tabelas pode ser aces
 
 Após inserção dos dados podemos visualizar como os dados foram distribuídos nas tabelas por meio do comando `SELECT * FROM nome_tabela`.
 
-        SELECT * FROM paciente LIMIT 5;
-
-
-        
+`SELECT * FROM paciente LIMIT 5;`
+![image](https://user-images.githubusercontent.com/131414411/233526573-9e02833d-f7b2-42d7-8fd6-50a8d14f0fd5.png)
+    
