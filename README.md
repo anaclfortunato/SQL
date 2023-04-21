@@ -70,3 +70,6 @@ pequena, porém para o objetivo do projeto a quantidade foi significativa.
 
 O arquivo contendo o script os dados a serem inseridos nas tabelas pode ser acessado em [dados_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/dados_clinica_vet.sql).
 
+## Relatórios gerados com base nas informações armazenadas nas tabelas
+
+Após inserção dos dados podemos visualizar como os dados foram distribuídos nas tabelas por meio do comando `SELECT * FROM nome_tabela;`.
