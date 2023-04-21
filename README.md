@@ -138,3 +138,23 @@ Durante o projeto foram criados dois stored procedures que podem ser acessados e
         qualquer um dos argumentos de forma diferente aos que estão relacionados no banco de dados, irá retornar a estrutura da tabela, porém nenhum 
         registro. 
 
+### Triggers 
+
+Definimos como trigger um conjunto de sentenças ou programa armazenado no servidor (de banco de dados) criados para serem executados (disparados) de forma 
+automática quando um ou mais eventos de DML (linguagem de manipulação de dados) específicos ocorrem no banco de dados. O trigger é ativado e executa suas 
+sentenças no momento em que uma operação de DML (INSERT, UPDATE e DELETE) associada ao disparador ocorre.
+
+Os triggers nasceram integrados aos bancos de dados para funcionarem da mesma forma, na qual muitas linguagens de programação ativam a detecção de eventos 
+específicos quando o programa é executado. A principal aplicação dada aos triggers no ecossistema de banco de dados é o uso de sua ativação ou disparo para 
+alimentar as tabelas de auditoria. Essas tabelas funcionam como complemento dentro de um banco de dados, compilando informações adicionais que não são 
+importantes dentro das tabelas principais.
+
+A aplicação de triggers pode ser feita em dois momentos diferentes de uma operação do tipo UPDATE, DELETE ou INSERT. Esses momentos podem ser antes (BEFORE) 
+da operação ou depois (AFTER) dela. Triggers do modelo BEFORE disparam antes que uma ação ocorra, o que pode evitar com que a mesma nem chegue a acontecer, 
+dando mais segurança ao DB, por exemplo: realizar a validação de dados; realizar a checagem de dados obrigatórios; impedir ações em uma tabela que está sendo 
+usada em certo momento. E triggers do modelo AFTER ocorrem apenas depois que a ação já aconteceu, o que podemos fazer com os triggers deste tipo é a auditoria, 
+para sempre mapear todas as alterações realizadas nas tabelas do DB.
+
+Neste projeto foram criados dois triggers, sendo eles um de BEFORE e um de AFTER, podem ser acessado o script em [triggers_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/triggers_clinica_vet.sql).
+
+`•  Trigger BEFORE`:    
