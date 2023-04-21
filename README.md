@@ -11,3 +11,24 @@ Para confecção desse repositório algumas alterações foram feitas após o t�
 que alterasse de forma total o que foi entregue anteriormente. 
 
 ## Modelo de Negócio 
+O modelo de negócio escolhido foi Clínica Veterinária de pequenos animais, ou seja, que faz atendimento somente de cão e gato. Um banco de dados 
+para esse tipo de negócio necessita de tabelas específicas com informações sobre funcionários, clientes e pacientes, consultas e pagamentos, além 
+de controle de receituário, como quando é recomendado tratamento e quais medicamentos foram necessários. 
+
+## Planejamento Inicial 
+
+Antes de ser montado o script do banco de dados, foi necessário um planejamento sobre o que deveria compor de forma coerente o banco de dados para 
+fazer sentido ao negócio e quais as relações presentes entre as tabelas.
+
+Listagem de tabelas relacionais que compõem o projeto:
+  • Cliente: dados pessoais do cliente;
+  • Paciente: dados pessoais do paciente;
+  • Veterinário: dados pessoais e profissionais dos médicos veterinários que trabalham na clínica;
+  • Estagiário: dados pessoais e outros necessários para realização do estágio;
+  • Consulta: dados sobre cada consulta realizada na clínica;
+  • Pagamento: dados sobre o pagamento de cada consulta realizada;
+  • Tratamento: dados sobre tratamento quando necessário;
+  • Medicamento: dados sobre medicamentos passados em caso de tratamento;
+  • Vacina: tipo específico de consulta que há necessidade de informações diferentes sobre protocolo vacinal iniciado.
+  
+Também foi incluso uma tabela contendo serviços e valores oferecidos pela clínica.
