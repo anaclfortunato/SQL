@@ -53,5 +53,5 @@ essenciais que permitem o embasamento necessário para algumas análises.
 
 Após definir a estrutura das tabelas, foi criado um script contendo o schema onde será inserido o banco de dados e estutura das tabelas nele 
 presente. 
-        `Arquivo: db_clinica_vet.sql`
+        `Arquivo: db_clinica_vet.sql` **https://github.com/anaclfortunato/SQL/blob/main/db_clinica_vet.sql**
         
