@@ -22,23 +22,23 @@ fazer sentido ao negócio e quais as relações presentes entre as tabelas.
 
 Listagem de tabelas relacionais que compõem o projeto:
 
-                • Cliente: dados pessoais do cliente;
+    •   Cliente: dados pessoais do cliente;
+    
+    •   Paciente: dados pessoais do paciente;
+    
+    •   Veterinário: dados pessoais e profissionais dos médicos veterinários que trabalham na clínica;
         
-                • Paciente: dados pessoais do paciente;
+    •   Estagiário: dados pessoais e outros necessários para realização do estágio;
         
-                • Veterinário: dados pessoais e profissionais dos médicos veterinários que trabalham na clínica;
+    •   Consulta: dados sobre cada consulta realizada na clínica;
         
-                • Estagiário: dados pessoais e outros necessários para realização do estágio;
+    •   Pagamento: dados sobre o pagamento de cada consulta realizada;
         
-                • Consulta: dados sobre cada consulta realizada na clínica;
+    •   Tratamento: dados sobre tratamento quando necessário;
         
-                • Pagamento: dados sobre o pagamento de cada consulta realizada;
+    •   Medicamento: dados sobre medicamentos passados em caso de tratamento;
         
-                • Tratamento: dados sobre tratamento quando necessário;
-        
-                • Medicamento: dados sobre medicamentos passados em caso de tratamento;
-        
-                • Vacina: tipo específico de consulta que há necessidade de informações diferentes sobre protocolo vacinal iniciado. 
+    •   Vacina: tipo específico de consulta que há necessidade de informações diferentes sobre protocolo vacinal iniciado. 
 
     Também foi incluso uma tabela Valores contendo serviços oferecidos pela clínica e seu determinado valor. 
     
@@ -97,10 +97,9 @@ também permitem a inserção, a eliminação e a atualização dos registros qu
 da view quando ela é criada.
 
 Nesse projeto foram criadas três views descritas a seguir, o script de criação e exemplo de como fazer consulta com elas está disponível em [views_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/views_clinica_vet.sql):
-
-              •	**retorno**: retorna o histórico de consultas marcadas como retorno feitas na clínica;
-              •	**vacinacao**: retorna histórico da quantidade de vacinas aplicadas em canino (cachorro) e felino (gato);
-              •	**faturamento**: retorna histórico de todos os atendimentos clínicos no mês 10/2022.
+    •   **retorno**: retorna o histórico de consultas marcadas como retorno feitas na clínica;
+    •	  **vacinacao**: retorna histórico da quantidade de vacinas aplicadas em canino (cachorro) e felino (gato);
+    •	  **faturamento**: retorna histórico de todos os atendimentos clínicos no mês 10/2022.
  
 No caso do banco de dados atual, a view faturamento não teria tanta funcionalidade, já que tem apenas dados de uma semana de atendimento, porém em um 
 caso real ajudaria a ter controle de quantas consultas clínicas são feitas por dia, sendo esse o controle dos atendimentos um dos focos principais de 
