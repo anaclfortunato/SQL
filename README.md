@@ -72,4 +72,9 @@ O arquivo contendo o script os dados a serem inseridos nas tabelas pode ser aces
 
 ## Relatórios gerados com base nas informações armazenadas nas tabelas
 
-Após inserção dos dados podemos visualizar como os dados foram distribuídos nas tabelas por meio do comando `SELECT * FROM nome_tabela;`.
+Após inserção dos dados podemos visualizar como os dados foram distribuídos nas tabelas por meio do comando `SELECT * FROM nome_tabela`.
+
+        SELECT * FROM paciente LIMIT 5;
+![image](https://user-images.githubusercontent.com/131414411/233525907-38f1ddbf-56d8-4d2e-a4e0-b4277521593a.png)
+
+        
