@@ -52,12 +52,21 @@ essenciais que permitem o embasamento necessário para algumas análises.
 ## Script de criação de objetos do banco de dados
 
 Após definir a estrutura das tabelas, foi criado um script contendo o schema onde será inserido o banco de dados e estutura das tabelas nele 
-presente. Script pode ser acessado em [db_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/db_clinica_vet.sql).
+presente. O arquivo contendo o script pode ser acessado em [db_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/db_clinica_vet.sql).
 
 Ao ser concluída a inserção do banco de dados relacional no servidor MySQL, podemos gerar um **diagrama entidade-relacionamento**, onde aparece de 
 forma ilustrada através de um fluxograma as relações entre as tabelas e suas colunas. Além da tabela valores que não possui relação com outras tabelas. 
 
 ![diagrama_ER](https://user-images.githubusercontent.com/131414411/233524983-da5f511d-7ebc-4054-ae85-8b6b39cf25c9.png)
 
-        Legenda: ![image](https://user-images.githubusercontent.com/131414411/233525103-b274c031-f817-4b09-be1e-6adf2bbda35f.png)
+## Script de inserção de dados
+
+Os dados criados para o atual projeto são fabricados. Alguns foram retirados de outros bancos de dados disponíveis no MySQL, ou gerados de forma 
+aleatória utilizando recursos do Microsoft Excel, ou baseados em casos que vivenciei durante minha atuação como Medica Veterinária. No entanto, 
+sua compilação foi feita de forma difusa.
+
+Para o projeto foram criados dados correspondentes a uma semana de atendimento na Clínica Veterinária, fazendo com que a extensão dos dados seja 
+pequena, porém para o objetivo do projeto a quantidade foi significativa. 
+
+O arquivo contendo o script os dados a serem inseridos nas tabelas pode ser acessado em [dados_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/dados_clinica_vet.sql).
 
