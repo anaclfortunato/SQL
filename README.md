@@ -22,23 +22,23 @@ fazer sentido ao negócio e quais as relações presentes entre as tabelas.
 
 Listagem de tabelas relacionais que compõem o projeto:
 
-        •	Cliente: dados pessoais do cliente;
+                • Cliente: dados pessoais do cliente;
         
-        •	Paciente: dados pessoais do paciente;
+                • Paciente: dados pessoais do paciente;
         
-        •	Veterinário: dados pessoais e profissionais dos médicos veterinários que trabalham na clínica;
+                • Veterinário: dados pessoais e profissionais dos médicos veterinários que trabalham na clínica;
         
-        •	Estagiário: dados pessoais e outros necessários para realização do estágio;
+                • Estagiário: dados pessoais e outros necessários para realização do estágio;
         
-        •	Consulta: dados sobre cada consulta realizada na clínica;
+                • Consulta: dados sobre cada consulta realizada na clínica;
         
-        •	Pagamento: dados sobre o pagamento de cada consulta realizada;
+                • Pagamento: dados sobre o pagamento de cada consulta realizada;
         
-        •	Tratamento: dados sobre tratamento quando necessário;
+                • Tratamento: dados sobre tratamento quando necessário;
         
-        •	Medicamento: dados sobre medicamentos passados em caso de tratamento;
+                • Medicamento: dados sobre medicamentos passados em caso de tratamento;
         
-        •	Vacina: tipo específico de consulta que há necessidade de informações diferentes sobre protocolo vacinal iniciado. 
+                • Vacina: tipo específico de consulta que há necessidade de informações diferentes sobre protocolo vacinal iniciado. 
 
     Também foi incluso uma tabela Valores contendo serviços oferecidos pela clínica e seu determinado valor. 
     
@@ -72,8 +72,44 @@ O arquivo contendo o script os dados a serem inseridos nas tabelas pode ser aces
 
 ## Relatórios gerados com base nas informações armazenadas nas tabelas
 
-Após inserção dos dados podemos visualizar como os dados foram distribuídos nas tabelas por meio do comando `SELECT * FROM nome_tabela`.
+No decorrer da rotina de uma Clínica Veterinária algumas análises são comuns de serem feitas, como relação entre cliente e paciente que irá 
+passar em consulta, quais médicos veterinários e estagiários estarão presentes no atendimento, tratamentos receitados em caso de necessidade e 
+que medicamentos fazem parte deste tratamento, protocolo vacinal e controle de estoque de vacinas usadas. Além do pagamento feito por a cada 
+consulta que gera ao final um faturamento x para clínica que deve ser analisado. Em um caso real poderíamos ter também informações mais completas 
+do atendimento, assim como controle de estoque de materiais e gastos presentes no dia a dia. 
 
-`SELECT * FROM paciente LIMIT 5;`
-![image](https://user-images.githubusercontent.com/131414411/233526573-9e02833d-f7b2-42d7-8fd6-50a8d14f0fd5.png)
-    
+Podemos fazer diferentes consultas, como `SELECT * FROM nome_tabela` que retorna de forma total os dados inseridos nas tabelas de forma total ou fazer 
+manipulação dos dados para casos específicos quando necessário por meio de filtros (ex. WHERE) e diferentes funções (ex. função de agregração GROUP BY). 
+
+Além das análises feitas de forma manual, foram criado views, stored procedures, funções e triggers para apoiar necessidades e operações a serem 
+realizadas pela clínica.
+
+### Views 
+
+Uma view é um conjunto de resultados de uma tabela ou mais tabelas de um banco de dados. Também podemos defini-las como “tabela virtual” que é gerada 
+a partir de uma ou mais tabelas de um banco de dados relacional. Entendemos como “conjunto de resultados de uma ou mais tabelas” o fato de a view só 
+armazenar uma estrutura de consulta do tipo (SELECT * FROM...) sob um nome distintivo, e não a estrutura de campos e registros que mostra quando é 
+executada.
+
+São compostas pela mesma estrutura que uma tabela, ou seja, linhas e colunas. É executada como uma busca de tabela convencional. Inclusive pode adicionar 
+funções condicionais a ela.E embora sejam utilizadas para mostrar dados combinando duas ou mais tabelas, em vez de ter que elaborar a consulta, as views 
+também permitem a inserção, a eliminação e a atualização dos registros que mostram. Mesmo que este último fique condicionado às restrições de estrutura 
+da view quando ela é criada.
+
+Nesse projeto foram criadas três views descritas a seguir, o script de criação e exemplo de como fazer consulta com elas está disponível em [views_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/views_clinica_vet.sql):
+
+              •	**retorno**: retorna o histórico de consultas marcadas como retorno feitas na clínica;
+              •	**vacinacao**: retorna histórico da quantidade de vacinas aplicadas em canino (cachorro) e felino (gato);
+              •	**faturamento**: retorna histórico de todos os atendimentos clínicos no mês 10/2022.
+ 
+No caso do banco de dados atual, a view faturamento não teria tanta funcionalidade, já que tem apenas dados de uma semana de atendimento, porém em um 
+caso real ajudaria a ter controle de quantas consultas clínicas são feitas por dia, sendo esse o controle dos atendimentos um dos focos principais de 
+uma clínica veterinária. 
+
+### Function 
+Funções permitem criar uma rotina especifica que processe determinados parâmetros e retorna um resultado determinado. Cada função é basicamente uma 
+peça do código que realiza uma operação determinada, é claro, para o que foi idealizada. Em alguns casos, a função espera um ou mais parâmetros a 
+serem processados e, em outros casos, simplesmente são executadas para que devolvam um dado específico.
+
+Foi criada no projeto uma função **consulta marcada**, a qual retorna ao inserir data, hora e id do médico veterinário, qual o tipo da consulta e nome 
+do cliente e paciente atendidos. Seu script de criação e exemplo de uso pode ser acessado em [function_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/function_clinica_vet.sql). 
