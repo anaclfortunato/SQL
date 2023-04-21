@@ -46,3 +46,12 @@ Listagem de tabelas relacionais que compõem o projeto:
  
 ![tabelas](https://user-images.githubusercontent.com/131414411/233517221-4c01dc2d-3a7d-4858-8887-00c7044989bd.png)
 
+Apesar de saber que no dia a dia pode ser necessário mais informações do que aqui presente, para criação do projeto foi escolhido as mais 
+essenciais que permitem o embasamento necessário para algumas análises. 
+
+## Script de criação de objetos do banco de dados
+
+Após definir a estrutura das tabelas, foi criado um script contendo o schema onde será inserido o banco de dados e estutura das tabelas nele 
+presente. 
+        Arquivo: db_clinica_vet.sql
+        
