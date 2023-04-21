@@ -99,7 +99,9 @@ da view quando ela é criada.
 Nesse projeto foram criadas três views descritas a seguir, o script de criação e exemplo de como fazer consulta com elas está disponível em [views_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/views_clinica_vet.sql):
 
         •   retorno: retorna o histórico de consultas marcadas como retorno feitas na clínica;
+        
         •	vacinacao: retorna histórico da quantidade de vacinas aplicadas em canino (cachorro) e felino (gato);
+        
         •	faturamento: retorna histórico de todos os atendimentos clínicos no mês 10/2022.
  
 No caso do banco de dados atual, a view faturamento não teria tanta funcionalidade, já que tem apenas dados de uma semana de atendimento, porém em um 
@@ -113,3 +115,26 @@ serem processados e, em outros casos, simplesmente são executadas para que devo
 
 Foi criada no projeto uma função **consulta marcada**, a qual retorna ao inserir data, hora e id do médico veterinário, qual o tipo da consulta e nome 
 do cliente e paciente atendidos. Seu script de criação e exemplo de uso pode ser acessado em [function_clinica_vet](https://github.com/anaclfortunato/SQL/blob/main/function_clinica_vet.sql). 
+
+### Stored Procedures 
+
+Um stored procedure é simplesmente um repositório (container) para um conjunto de declarações SQL. Eles podem conter declarações condicionais e 
+processamento lógico que normalmente estaria indisponível em uma declaração SQL tradicional gerada dinamicamente. Por exemplo, uma stored procedure pode 
+conter comandos de loop ou condicionais, como do/while, if/then /else, dentre outros, permitindo a realização de operações mais complexas. Ou seja, 
+funciona como um procedimento sobre o banco de dados, de forma similar aos procedimentos que usamos durante a codificação usando linguagens procedurais, 
+tais como C ou Pascal.
+
+Possuir códigos SQL em forma de stored procedures possibilita à aplicação minimizar a quantidade de código SQL que aparece no código fonte da aplicação e 
+coloca estes códigos sob o controle da camada do banco de dados. Isso faz com que o projeto da aplicação fique mais claro e deixa as páginas de código 
+fonte da aplicação livres de códigos SQL dinâmicos, que seriam desnecessários. Com isso, caso haja a necessidade de mudar alguma instrução em SQL, basta 
+alterarmos o código da stored procedure, sem haver a necessidade de alterar o código fonte da aplicação e ter que recompilá-lo.
+
+Durante o projeto foram criados dois stored procedures que podem ser acessados em [stored_procedures_vet](https://github.com/anaclfortunato/SQL/blob/main/stored_procedures_vet.sql). 
+
+        •   consulta_marcada: ao ser chamado de acordo com o id do médico veterinário retorna todos consultas que ele realizou, porém se adicionar algum 
+        id_mv não correspondente ao armazenado nas tabelas veterinário/consulta, aparecerá mensagem de erro.
+        
+        •   cliente_paciente: ao ser chamado retorna a partir do nome do cliente e do paciente as principais informações sobre o paciente. Se adicionar 
+        qualquer um dos argumentos de forma diferente aos que estão relacionados no banco de dados, irá retornar a estrutura da tabela, porém nenhum 
+        registro. 
+
