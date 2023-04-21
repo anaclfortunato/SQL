@@ -59,4 +59,5 @@ forma ilustrada através de um fluxograma as relações entre as tabelas e suas 
 
 ![diagrama_ER](https://user-images.githubusercontent.com/131414411/233524983-da5f511d-7ebc-4054-ae85-8b6b39cf25c9.png)
 
+        Legenda: ![image](https://user-images.githubusercontent.com/131414411/233525103-b274c031-f817-4b09-be1e-6adf2bbda35f.png)
 
