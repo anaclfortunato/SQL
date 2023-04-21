@@ -22,23 +22,23 @@ fazer sentido ao negócio e quais as relações presentes entre as tabelas.
 
 Listagem de tabelas relacionais que compõem o projeto:
 
-    • Cliente: dados pessoais do cliente;
+    - Cliente: dados pessoais do cliente;
   
-    • Paciente: dados pessoais do paciente;
+    - Paciente: dados pessoais do paciente;
   
-    • Veterinário: dados pessoais e profissionais dos médicos veterinários que trabalham na clínica;
+    - Veterinário: dados pessoais e profissionais dos médicos veterinários que trabalham na clínica;
   
-    • Estagiário: dados pessoais e outros necessários para realização do estágio;
+    - Estagiário: dados pessoais e outros necessários para realização do estágio;
   
-    • Consulta: dados sobre cada consulta realizada na clínica;
+    - Consulta: dados sobre cada consulta realizada na clínica;
   
-    • Pagamento: dados sobre o pagamento de cada consulta realizada;
+    - Pagamento: dados sobre o pagamento de cada consulta realizada;
   
-    • Tratamento: dados sobre tratamento quando necessário;
+    - Tratamento: dados sobre tratamento quando necessário;
   
-    • Medicamento: dados sobre medicamentos passados em caso de tratamento;
+    - Medicamento: dados sobre medicamentos passados em caso de tratamento;
   
-    • Vacina: tipo específico de consulta que há necessidade de informações diferentes sobre protocolo vacinal iniciado.
+    - Vacina: tipo específico de consulta que há necessidade de informações diferentes sobre protocolo vacinal iniciado.
   
     Também foi incluso uma tabela contendo serviços e valores oferecidos pela clínica.
     
@@ -75,6 +75,6 @@ O arquivo contendo o script os dados a serem inseridos nas tabelas pode ser aces
 Após inserção dos dados podemos visualizar como os dados foram distribuídos nas tabelas por meio do comando `SELECT * FROM nome_tabela`.
 
         SELECT * FROM paciente LIMIT 5;
-![image](https://user-images.githubusercontent.com/131414411/233525907-38f1ddbf-56d8-4d2e-a4e0-b4277521593a.png)
+
 
         
