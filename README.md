@@ -22,24 +22,24 @@ fazer sentido ao negócio e quais as relações presentes entre as tabelas.
 
 Listagem de tabelas relacionais que compõem o projeto:
 
-    - Cliente: dados pessoais do cliente;
-  
-    - Paciente: dados pessoais do paciente;
-  
-    - Veterinário: dados pessoais e profissionais dos médicos veterinários que trabalham na clínica;
-  
-    - Estagiário: dados pessoais e outros necessários para realização do estágio;
-  
-    - Consulta: dados sobre cada consulta realizada na clínica;
-  
-    - Pagamento: dados sobre o pagamento de cada consulta realizada;
-  
-    - Tratamento: dados sobre tratamento quando necessário;
-  
-    - Medicamento: dados sobre medicamentos passados em caso de tratamento;
-  
-    - Vacina: tipo específico de consulta que há necessidade de informações diferentes sobre protocolo vacinal iniciado.
-  
+        •	Cliente: dados pessoais do cliente;
+        
+        •	Paciente: dados pessoais do paciente;
+        
+        •	Veterinário: dados pessoais e profissionais dos médicos veterinários que trabalham na clínica;
+        
+        •	Estagiário: dados pessoais e outros necessários para realização do estágio;
+        
+        •	Consulta: dados sobre cada consulta realizada na clínica;
+        
+        •	Pagamento: dados sobre o pagamento de cada consulta realizada;
+        
+        •	Tratamento: dados sobre tratamento quando necessário;
+        
+        •	Medicamento: dados sobre medicamentos passados em caso de tratamento;
+        
+        •	Vacina: tipo específico de consulta que há necessidade de informações diferentes sobre protocolo vacinal iniciado. 
+
     Também foi incluso uma tabela contendo serviços e valores oferecidos pela clínica.
     
  Escopo de tabelas com descrição de sua estrutura (coluna, tipo de dado e tipo de chave):
